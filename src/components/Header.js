@@ -22,20 +22,20 @@ class Header extends Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href='/home'>Home</Nav.Link>
-              <Nav.Link href="#about">About Us</Nav.Link>
+              <Nav.Link href="/aboutus">About Us</Nav.Link>
               <Nav.Link href="#news">News</Nav.Link>
               <NavDropdown title="Gallery" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/Gallery/events">Nostalgia</NavDropdown.Item>
+                <NavDropdown.Item href="/Gallery/nostalgia">Nostalgia</NavDropdown.Item>
                 <NavDropdown.Item href="/Gallery/events">Events</NavDropdown.Item>
                 <NavDropdown.Item href="/Gallery/events">Art</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Social Work</NavDropdown.Item>
+                <NavDropdown.Item href="/Gallery/socialWork">Social Work</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="#contact">Contact Us</Nav.Link>
+              <Nav.Link href="/contactus">Contact Us</Nav.Link>
             </Nav>
             <Nav>
               <Nav.Item>
-                <Nav.Link href="#fbLink" id="fbtooltip">
+                <Nav.Link href="https://www.facebook.com/groups/150367561673681/" target="_blank" id="fbtooltip">
                   <i className="fa fa-facebook-square fa-lg" />
                   <span class="nav-link-inner--text d-lg-none ml-2">Facebook</span>
                 </Nav.Link>
