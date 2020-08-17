@@ -16,7 +16,7 @@ function Footer(props) {
                         <li><Link to='/'>Contact Us</Link></li>
                     </ul>
                 </div>
-                <div className="col-7 col-sm-5">
+                {/* <div className="col-7 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
 		              Wolfenden Hall,<br />
@@ -27,7 +27,7 @@ function Footer(props) {
 		              <i className="fa fa-envelope fa-lg"></i>: <a href="mailto:wolf@xyz.com">
                          wolf@xyz.com</a>
                     </address>
-                </div>
+                </div> */}
                 <div className="col-12 col-sm-4 align-self-center">
                     <div className="text-center">
                         <a className="btn btn-social-icon btn-google" href="http://google.com/+"><span className="fa fa-google-plus"></span></a>

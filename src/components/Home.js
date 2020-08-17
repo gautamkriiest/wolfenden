@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import { Card, CardBody } from 'reactstrap';
 
 function Home(){
   return(
@@ -9,41 +10,28 @@ function Home(){
       <Carousel.Item>
         <img
           className="d-block w-100"
-          height={400}
+          height={500}
           src={require('../assets/images/WolfWall.jpg')}
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          height={400}
+          height={500}
           src={require('../assets/images/Wolf2.jpg')}
           alt="First slide"
         />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
+        fit= 'cover'
           className="d-block w-100"
-          height={400}
+          height={500}
           margin="auto"
           src={require('../assets/images/wolf3.jpg')}
           alt="Second slide"
         />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
     <Jumbotron className="align-self-center">
@@ -59,6 +47,17 @@ function Home(){
           <p>As far as the boarders are concerned it had a plethora of expertes since the olden days like Ashok Mukherjee 1976 batch and University record holder of Athletics, Amit Samanto 1976 batch Boxing specialist, Soumitra Sarkar Center Forward for the University in the olden days to Jahir Abbas the present day WBCS officer, besides the mundane a lot of corporates in all the firms across the globe.</p>
         </div>
       </div>
+      <div className="col-12">
+                    <Card>
+                        <CardBody className="bg-faded">
+                            <blockquote className="blockquote">
+                                <p className="mb-0">It's not just a Hall of residence in fact- </p>
+                                <footer className="blockquote-footer"><cite>“It is a way of life, a philosophy... a place of enthusiasm and vigour.”</cite>
+                                </footer>
+                            </blockquote>
+                        </CardBody>
+                    </Card>
+                </div>
       </div>
     </Jumbotron>
     </>

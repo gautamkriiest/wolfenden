@@ -6,7 +6,8 @@ import SocialGallery from './Gallery/socialGal';
 import NostalgiaGallery from './Gallery/Nostalgia';
 import Footer from './footer';
 import { Switch,Route,Redirect } from 'react-router-dom';
-import About from './about';
+import Nostalgia from './nostalgia';
+import About from './events';
 import Contact from './contactus';
 function Main() {
   return(
@@ -14,7 +15,8 @@ function Main() {
       <Header />
       <Switch>
         <Route path="/home" component={Home}/>
-        <Route path="/aboutus" component={About}/>
+        <Route path="/nostalgia" component={Nostalgia}/>
+        <Route path="/events" component={About}/>
         <Route path="/Gallery/events" component={Gallery}/> 
         <Route path="/Gallery/nostalgia" component={NostalgiaGallery}/> 
         <Route path="/Gallery/socialWork" component={SocialGallery}/> 

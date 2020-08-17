@@ -19,8 +19,9 @@ body {
   margin-bottom: 1.875rem; }
 
 .gallery-thumbnail {
-  max-width: 100%;
-  height: auto;
+  object-fit: cover;
+  /* max-width: 100%; */
+  /* height: auto; */
   border-radius: 4px; }
 
 .card-icon-open {
