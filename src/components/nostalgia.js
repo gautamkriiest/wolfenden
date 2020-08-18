@@ -14,6 +14,9 @@ function Nostalgia(props) {
           <BreadcrumbItem>
             <Link to="/home">Home</Link>
           </BreadcrumbItem>
+          <BreadcrumbItem>
+            <Link to="/events">Events</Link>
+          </BreadcrumbItem>
           <BreadcrumbItem active>Nostalgia</BreadcrumbItem>
         </Breadcrumb>
         <div className="col-12">

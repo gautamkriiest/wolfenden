@@ -1,82 +1,98 @@
-import React, {Component} from 'react';
-import GalleryImage from './GalleryImage';
-import GalleryModal from './GalleryModal';
-import '../../assets/css/Gallery.css';
-
-// Create new array with URLs for images
-let imgUrls = [
-    require('../../assets/images/Covid-19 + Amphan/1.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/2.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/3.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/4.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/5.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/6.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/7.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/8.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/9.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/10.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/11.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/12.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/13.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/14.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/15.jpg'),
-    require('../../assets/images/Covid-19 + Amphan/16.jpg')
-   ];
+import React from 'react';
+import ImageGallery from 'react-image-gallery';
+import { Component } from 'react';
+import '../../assets/css/image-gallery.css';
+import { BreadcrumbItem , Breadcrumb} from 'reactstrap';
+import { Link } from "react-router-dom";
 
 
-// Component for gallery
-class SocialGallery extends Component{
-    constructor(props) {
-     super(props);
-    
-     this.state = {
-      showModal: false,
-      url: ''
-     }
-    
-     this.openModal = this.openModal.bind(this);
-    
-     this.closeModal = this.closeModal.bind(this);
+const images = [
+    {
+      original: require('../../assets/images/Covid-19 + Amphan/1.jpg'),
+      thumbnail: require('../../assets/images/Covid-19 + Amphan/1.jpg'),
+    },
+    {
+      original: require('../../assets/images/Covid-19 + Amphan/2.jpg'),
+      thumbnail: require('../../assets/images/Covid-19 + Amphan/2.jpg'),
+    },
+    {
+      original: require('../../assets/images/Covid-19 + Amphan/3.jpg'),
+      thumbnail: require('../../assets/images/Covid-19 + Amphan/3.jpg'),
+    },
+    {
+        original: require('../../assets/images/Covid-19 + Amphan/4.jpg'),
+        thumbnail: require('../../assets/images/Covid-19 + Amphan/4.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/5.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/5.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/6.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/6.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/7.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/7.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/8.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/8.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/9.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/9.jpg'),
+    },
+    {
+        original: require('../../assets/images/Covid-19 + Amphan/10.jpg'),
+        thumbnail: require('../../assets/images/Covid-19 + Amphan/10.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/11.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/11.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/12.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/12.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/13.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/13.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/14.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/14.jpg'),
+    },
+    {
+    original: require('../../assets/images/Covid-19 + Amphan/15.jpg'),
+    thumbnail: require('../../assets/images/Covid-19 + Amphan/15.jpg'),
+    },
+    {
+        original: require('../../assets/images/Covid-19 + Amphan/16.jpg'),
+        thumbnail: require('../../assets/images/Covid-19 + Amphan/16.jpg'),
+    },
+];
+class SocialGal extends Component {
+    render(){
+      return (
+        <div className="container">
+            <div className="row">
+                <Breadcrumb>
+                <BreadcrumbItem>
+                    <Link to="/home">Home</Link>
+                </BreadcrumbItem>
+                <BreadcrumbItem>Gallery</BreadcrumbItem>
+                <BreadcrumbItem active>Social Work</BreadcrumbItem>
+                </Breadcrumb>
+                <div className="col-12">
+                <h3>Covid 19 and Amphan Releif Donation By Nostalgia Team</h3>
+                <hr />
+                </div>
+            </div>
+            <ImageGallery items={images}/>
+        </div>
+    )
     }
-    
-    render() {
-     return(
-      <div refs='gallery-container' className='container-fluid gallery-container'>
-       <div className='row'>
-        {
-         imgUrls.map((url, index) => {
-          return <div className='col-sm-6 col-md-3 col-xl-2'>
-           <div className='gallery-card'>
-            <GalleryImage className='gallery-thumbnail' src={url} alt={'Image number ' + (index + 1)} />
-    
-            <span className='card-icon-open fa fa-expand' value={url} onClick={(e) => this.openModal(url, e)}></span>
-           </div>
-         </div>
-        })
-       }
-      </div>
-    
-      <GalleryModal isOpen={this.state.showModal} onClick={this.closeModal} src={this.state.url} /> 
-     </div>
-     )
-    }
-   
-    // Function for opening modal dialog
-    openModal(url, e) {
-     this.setState({
-      showModal: true,
-      url: url
-     })
-    };
-   
-    // Function for closing modal dialog
-    closeModal() {
-     this.setState({
-      showModal: false,
-      url: ''
-     })
-    }
-   }
+}
 
-
-export default SocialGallery;
+export default SocialGal;

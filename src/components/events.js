@@ -1,5 +1,5 @@
 import React from "react";
-import { Breadcrumb, BreadcrumbItem, Card, CardBody } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem} from "reactstrap";
 import { Link } from "react-router-dom";
 import { Jumbotron, Nav } from "react-bootstrap";
 // import { Loading } from "./LodingComponent";
@@ -17,7 +17,7 @@ function About(props) {
           <BreadcrumbItem active>Events</BreadcrumbItem>
         </Breadcrumb>
         <div className="col-12">
-          <h3>Events</h3>
+          <h3>Events of Wolfenden Hall</h3>
           <hr />
         </div>
       </div>
@@ -26,6 +26,7 @@ function About(props) {
           <div className="col-12 col-md">
           <Nav.Link href="/nostalgia">Nostalgia</Nav.Link>
           <Nav.Link href="#">Wolfame</Nav.Link>
+          <Nav.Link href="#">Uttran</Nav.Link>
           <Nav.Link href="#">Kholi Puja</Nav.Link>
           </div>
         </div>
